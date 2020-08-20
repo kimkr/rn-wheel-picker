@@ -15,6 +15,7 @@ const WheelCurvedPickerNativeInterface = {
 	propTypes: {
 		...View.propTypes,
 		data:PropTypes.array,
+		lineColor: ColorPropType,
 		textColor: ColorPropType,
 		textSize: PropTypes.number,
 		itemStyle: PropTypes.object,
@@ -87,6 +88,7 @@ WheelCurvedPicker.propTypes = {
 	...View.propTypes,
 	data: PropTypes.array,
 	textColor: ColorPropType,
+	lineColor: ColorPropType,
 	textSize: PropTypes.number,
 	itemStyle: PropTypes.object,
 	itemSpace: PropTypes.number,

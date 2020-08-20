@@ -27,6 +27,7 @@ public class ReactWheelCurvedPicker extends WheelCurvedPicker {
 
     private final EventDispatcher mEventDispatcher;
     private List<Integer> mValueData;
+    private Integer mLineColor;
 
     public ReactWheelCurvedPicker(ReactContext reactContext) {
         super(reactContext);
@@ -55,7 +56,7 @@ public class ReactWheelCurvedPicker extends WheelCurvedPicker {
         super.drawForeground(canvas);
 
         Paint paint = new Paint();
-        paint.setColor(Color.WHITE);
+        paint.setColor(mLineColor);
         canvas.drawLine(rectCurItem.left, rectCurItem.top, rectCurItem.right, rectCurItem.top, paint);
         canvas.drawLine(rectCurItem.left, rectCurItem.bottom, rectCurItem.right, rectCurItem.bottom, paint);
     }
@@ -69,6 +70,10 @@ public class ReactWheelCurvedPicker extends WheelCurvedPicker {
 
     public void setValueData(List<Integer> data) {
         mValueData = data;
+    }
+
+    public void setLineColor(int color) {
+       mLineColor = color;
     }
 
     public int getState() {
